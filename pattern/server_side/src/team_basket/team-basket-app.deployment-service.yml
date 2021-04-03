@@ -22,4 +22,18 @@ spec:
               value: "3000"
           ports:
             - containerPort: 3000
-              name: team-basket-app
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: team-basket-app
+  labels:
+    app: team-basket-app
+spec:
+  selector:
+    app: team-basket-app
+  ports:
+    - port: 3000
+      protocol: TCP
+      nodePort: 30003
+  type: LoadBalancer

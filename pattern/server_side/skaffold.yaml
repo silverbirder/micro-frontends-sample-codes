@@ -13,8 +13,7 @@ build:
 deploy:
   kubectl:
     manifests:
-    - src/team_basket/team-basket-app.deployment.yml
-    - src/team_inspire/team-inspire-app.deployment.yml
-    - src/team_product/team-product-app.deployment.yml
-    - src/team_search/team-search-app.deployment.yml
-    - src/load-balancer.service.yml
+    - src/team_basket/team-basket-app.deployment-service.yml
+    - src/team_inspire/team-inspire-app.deployment-service.yml
+    - src/team_product/team-product-app.deployment-service.yml
+    - src/team_search/team-search-app.deployment-service.yml

@@ -22,4 +22,18 @@ spec:
               value: "4000"
           ports:
             - containerPort: 4000
-              name: inspire-p
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: team-inspire-app
+  labels:
+    app: team-inspire-app
+spec:
+  selector:
+    app: team-inspire-app
+  ports:
+    - port: 4000
+      protocol: TCP
+      nodePort: 30004
+  type: LoadBalancer

@@ -22,4 +22,18 @@ spec:
               value: "5000"
           ports:
             - containerPort: 5000
-              name: product-p
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: team-product-app
+  labels:
+    app: team-product-app
+spec:
+  selector:
+    app: team-product-app
+  ports:
+    - port: 5000
+      protocol: TCP
+      nodePort: 30005
+  type: LoadBalancer
