@@ -1,22 +1,25 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: team-product-app
+  name: team-search-app
   labels:
-    app: team-product-app
+    app: team-search-app
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: team-search-app
   template:
     metadata:
       labels:
-        app: team-product-app
+        app: team-search-app
     spec:
       containers:
-        - name: team-product-app
-          image: team-product-app:v1
+        - name: team-search-app
+          image: team-search-app:v1
           env:
             - name: PORT
               value: "6000"
           ports:
             - containerPort: 6000
-              name: team-product-app
+              name: search-p

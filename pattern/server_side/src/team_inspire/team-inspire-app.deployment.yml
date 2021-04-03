@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: team-inspire-app
@@ -6,6 +6,9 @@ metadata:
     app: team-inspire-app
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: team-inspire-app
   template:
     metadata:
       labels:
@@ -19,4 +22,4 @@ spec:
               value: "4000"
           ports:
             - containerPort: 4000
-              name: team-inspire-app
+              name: inspire-p
