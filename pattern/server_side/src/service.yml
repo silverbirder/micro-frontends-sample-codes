@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: load-balancer-service
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 3000
+      targetPort: team-basket-app
+    - port: 4000
+      targetPort: team-inspire-app
+    - port: 5000
+      targetPort: team-product-app
+    - port: 6000
+      targetPort: team-search-app
+  selector:
+    app: 
+    - team-basket-app
+    - team-inspire-app
+    - team-product-app
+    - team-search-app

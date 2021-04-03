@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: team-product-app
+  labels:
+    app: team-product-app
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: team-product-app
+    spec:
+      containers:
+        - name: team-product-app
+          image: team-product-app:v1
+          env:
+            - name: PORT
+              value: "6000"
+          ports:
+            - containerPort: 6000
+              name: team-product-app

@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: team-basket-app
+  labels:
+    app: team-basket-app
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: team-basket-app
+    spec:
+      containers:
+        - name: team-basket-app
+          image: team-basket-app:v1
+          env:
+            - name: PORT
+              value: "3000"
+          ports:
+            - containerPort: 3000
+              name: team-basket-app

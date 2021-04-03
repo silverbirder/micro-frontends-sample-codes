@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: team-inspire-app
+  labels:
+    app: team-inspire-app
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: team-inspire-app
+    spec:
+      containers:
+        - name: team-inspire-app
+          image: team-inspire-app:v1
+          env:
+            - name: PORT
+              value: "4000"
+          ports:
+            - containerPort: 4000
+              name: team-inspire-app
