@@ -4,5 +4,9 @@
 ```
 $ minikube start
 $ skaffold dev
-$ minikube service team-basket-app
+$ minikube service team-composite-app
+```
+
+```
+$ minikube stop
 ```
