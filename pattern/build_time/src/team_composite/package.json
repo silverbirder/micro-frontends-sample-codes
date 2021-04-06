@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@bit/silver-birder.silverbirder.product-list": "^1.0.0",
-    "@bit/silver-birder.silverbirder.top-bar": "^1.0.0",
+    "@bit/silver-birder.micro-frontends-sample-collections.team-basket-text": "0.0.1",
+    "@bit/silver-birder.micro-frontends-sample-collections.team-inspire-text": "0.0.1",
+    "@bit/silver-birder.micro-frontends-sample-collections.team-product-text": "0.0.1",
+    "@bit/silver-birder.micro-frontends-sample-collections.team-search-text": "0.0.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",

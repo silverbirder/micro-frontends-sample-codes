@@ -1,10 +1,10 @@
 import React from 'react';
-import TeamBasketText from './components/team-basket-text/index'
+import TeamInspireText from './components/team-inspire-text/index'
 
 function App() {
   return (
     <>
-      <TeamBasketText/>
+      <TeamInspireText/>
     </>
   );
 }
