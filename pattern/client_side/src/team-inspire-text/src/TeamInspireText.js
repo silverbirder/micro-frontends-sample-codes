@@ -1,6 +1,6 @@
 import { html, css, LitElement } from 'lit-element';
 
-export class TeamBasketText extends LitElement {
+export class TeamInspireText extends LitElement {
   static get styles() {
     return css`
       :host {
@@ -21,7 +21,7 @@ export class TeamBasketText extends LitElement {
 
   render() {
     return html`
-      <div>Team Basket ${this.title}</div>
+      <div>Team Inspire ${this.title}</div>
     `;
   }
 }

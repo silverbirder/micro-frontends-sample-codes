@@ -25,5 +25,5 @@ export default /** @type {import('@web/dev-server').DevServerConfig} */ ({
   ],
 
   // See documentation for all available options
-  port: 3000,
+  port: 6000,
 });
