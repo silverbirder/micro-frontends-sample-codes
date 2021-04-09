@@ -26,4 +26,10 @@ export default /** @type {import('@web/dev-server').DevServerConfig} */ ({
 
   // See documentation for all available options
   port: 3000,
+  middleware: [
+    function rewriteIndex(context, next) {
+      context.res.setHeader('Access-Control-Allow-Origin', '*');
+      return next();
+    },
+  ],
 });

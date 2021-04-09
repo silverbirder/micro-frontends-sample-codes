@@ -25,5 +25,11 @@ export default /** @type {import('@web/dev-server').DevServerConfig} */ ({
   ],
 
   // See documentation for all available options
-  port: 6000,
+  port: 7000,
+  middleware: [
+    function rewriteIndex(context, next) {
+      context.res.setHeader('Access-Control-Allow-Origin', '*');
+      return next();
+    },
+  ],
 });
