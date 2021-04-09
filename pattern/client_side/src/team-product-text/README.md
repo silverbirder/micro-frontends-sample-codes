@@ -29,3 +29,9 @@ If you customize the configuration a lot, you can consider moving them to indivi
 npm start
 ```
 To run a local development server that serves the basic demo located in `demo/index.html`
+
+## Development on Docker
+
+```
+$ docker build -t team-product-text:v1 .
+```
