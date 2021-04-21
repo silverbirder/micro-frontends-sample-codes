@@ -10,4 +10,4 @@ COPY . .
 
 EXPOSE 2000
 
-CMD node serve.js
+CMD npm run start

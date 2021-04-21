@@ -1,4 +1,12 @@
 # Development
+## npm
+
+```
+$ npm install
+$ npm run install
+$ npm run start
+```
+
 ## Skaffold
 ### Dev
 ```

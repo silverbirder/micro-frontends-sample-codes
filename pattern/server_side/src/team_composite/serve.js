@@ -2,10 +2,10 @@ const express = require('express');
 const fetch = require('node-fetch');
 const app = express();
 const port = process.env.PORT || 2000;
-const basketHost = process.env.BASKET_HOST || 'team-basket-app:3000';
-const inspireHost = process.env.INSPIRE_HOST || 'team-inspire-app:4000';
-const productHost = process.env.PRODUCT_HOST || 'team-product-app:5000';
-const searchHost = process.env.SEARCH_HOST || 'team-search-app:6000';
+const basketHost = process.env.BASKET_HOST || 'localhost:3000';
+const inspireHost = process.env.INSPIRE_HOST || 'localhost:4000';
+const productHost = process.env.PRODUCT_HOST || 'localhost:5000';
+const searchHost = process.env.SEARCH_HOST || 'localhost:6000';
 
 app.get('/',  async (req, res) => {
   const basket = await (await fetch(`http://${basketHost}`)).text();
